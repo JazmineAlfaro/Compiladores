@@ -1,0 +1,8 @@
+5
+if_stmt := if ( cond ) { expr ; } opt_elif opt_else
+opt_elif := elif ( cond ) { expr ; } opt_elif 
+opt_elif := lambda
+opt_else := else { expr ; } 
+opt_else := lambda
+cond := cond1
+expr := a + b

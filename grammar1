@@ -1,0 +1,17 @@
+16
+if_stmt := if ( cond ) { expr ; } opt_elif opt_else
+opt_elif := elif ( cond ) { expr ; } opt_elif 
+opt_elif := lambda
+opt_else := else { expr ; }
+opt_else := lambda
+cond := cond1
+expr := ar_oper
+ar_oper := exp2 expp
+expp := + exp2 expp
+expp := - exp2 expp
+expp := lambda
+exp2 := exp3 exp2p
+exp2p := * exp3 exp2p
+exp2p := / exp3 exp2p
+exp2p := lambda
+exp3 := num | ( ar_oper )
