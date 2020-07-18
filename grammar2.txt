@@ -1,0 +1,17 @@
+program := asig
+asig := data_type id asig2
+asig2 :=  = arith_op
+asig2 := ;
+data_type := int
+data_type := float
+arith_op := op1 op2
+op2 := + op1 op2
+op2 := - op1 op2
+op2 := lambda
+op1 := op3 op4
+op4 := * op3 op4
+op4 := / op3 op4
+op4 := lambda
+op3 := num
+op3 := id
+op3 := ( arith_op )

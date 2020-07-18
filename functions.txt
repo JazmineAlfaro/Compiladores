@@ -1,0 +1,9 @@
+program := print id
+program := def id ( params ) {
+program := return val
+val := num
+val := id
+params := int id more_params
+params := float id more_params
+params := lambda
+more_params := , dec

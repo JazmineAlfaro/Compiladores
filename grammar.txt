@@ -1,0 +1,13 @@
+program := if_stmt
+if_stmt := if ( condition ) {
+if_stmt := elif ( condition ) {
+if_stmt := else {
+condition := val op val
+op := ==
+op := <=
+op := >=
+op := <
+op := >
+op := !=
+val := id
+val := num

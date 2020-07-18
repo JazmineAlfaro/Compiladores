@@ -1,0 +1,54 @@
+program := variables
+program := functions
+program := if_stmt
+data_type := int 
+data_type := float 
+data_type := string
+variables := dec asig ;
+dec := data_type id 
+asig := = val 
+asig := lambda
+val := id
+val := arith_op
+if_stmt := if ( operation ) { body  } opt_elif opt_else
+opt_elif := elif ( operation ) { body } opt_elif 
+opt_elif := lambda
+opt_else := else { operation ; } 
+opt_else := lambda
+condition := conditional comp_op conditional 
+conditional := num
+conditional := id 
+comp_op := == 
+comp_op := <= 
+comp_op := >= 
+comp_op := < 
+comp_op := > 
+comp_op := =
+comp_op := != 
+log_op  := and
+log_op := or
+functions := def
+func1 := id ( params ) { body }
+params := dec more_params
+params := lambda
+more_params := , dec more_params
+more_params := lambda
+body := dec opt_body ; body
+body := opt_return
+body := lambda
+opt_body := = arith_op
+opt_body := lambda 
+opt_return := return val_return
+val_return := num ;
+val_return := id ;
+val_return := func_1 ;
+arith_op := op1 op2
+op2 := + op1 op2 
+op2 := - op1 op2 
+op2 := lambda
+op1 := op3 op4
+op4 := * op3 op4
+op4 := / op3 op4
+op4 := lambda
+op3 := num 
+op3 := ( arith_op )
